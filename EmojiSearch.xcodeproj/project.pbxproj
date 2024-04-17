@@ -14,6 +14,7 @@
 		52A483302BCF635000CA035C /* EmojiSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4832F2BCF635000CA035C /* EmojiSearchTests.swift */; };
 		52A4833A2BCF635000CA035C /* EmojiSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A483392BCF635000CA035C /* EmojiSearchUITests.swift */; };
 		52A4833C2BCF635000CA035C /* EmojiSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4833B2BCF635000CA035C /* EmojiSearchUITestsLaunchTests.swift */; };
+		52A4834D2BCF6FA500CA035C /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4834C2BCF6FA500CA035C /* Emoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		52A483352BCF635000CA035C /* EmojiSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A483392BCF635000CA035C /* EmojiSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSearchUITests.swift; sourceTree = "<group>"; };
 		52A4833B2BCF635000CA035C /* EmojiSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52A4834C2BCF6FA500CA035C /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +96,10 @@
 		52A4831D2BCF634F00CA035C /* EmojiSearch */ = {
 			isa = PBXGroup;
 			children = (
-				52A4831E2BCF634F00CA035C /* EmojiSearchApp.swift */,
-				52A483202BCF634F00CA035C /* ContentView.swift */,
-				52A483222BCF635000CA035C /* Assets.xcassets */,
+				52A4834B2BCF6F8A00CA035C /* Model */,
+				52A483482BCF6CB100CA035C /* App */,
+				52A483492BCF6CB900CA035C /* View */,
+				52A4834A2BCF6CD700CA035C /* Resources */,
 				52A483242BCF635000CA035C /* Preview Content */,
 			);
 			path = EmojiSearch;
@@ -125,6 +128,38 @@
 				52A4833B2BCF635000CA035C /* EmojiSearchUITestsLaunchTests.swift */,
 			);
 			path = EmojiSearchUITests;
+			sourceTree = "<group>";
+		};
+		52A483482BCF6CB100CA035C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52A4831E2BCF634F00CA035C /* EmojiSearchApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		52A483492BCF6CB900CA035C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52A483202BCF634F00CA035C /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52A4834A2BCF6CD700CA035C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52A483222BCF635000CA035C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		52A4834B2BCF6F8A00CA035C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52A4834C2BCF6FA500CA035C /* Emoji.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A4834D2BCF6FA500CA035C /* Emoji.swift in Sources */,
 				52A483212BCF634F00CA035C /* ContentView.swift in Sources */,
 				52A4831F2BCF634F00CA035C /* EmojiSearchApp.swift in Sources */,
 			);
@@ -436,9 +472,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rizalpratama.EmojiSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -464,9 +504,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rizalpratama.EmojiSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
