@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var emojis: [Emoji] = EmojiProvider.allEmojis()
+   @State private var emojis: [Emoji] = EmojiProvider.allEmojis()
     
     
     @State private var searchText: String = ""
@@ -48,6 +48,16 @@ struct ContentView: View {
                     isRedacted = false
                 }
             }
+            .refreshable {
+                isRedacted = true
+                let newRow = EmojiProvider.allEmojis().randomElement()
+                emojis.insert(newRow!, at:0)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    isRedacted = false
+                }
+            }
+            
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always),prompt: "What emoji's that you are looking for ?")
             
             //            .listStyle(.plain)
